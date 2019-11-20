@@ -13,12 +13,14 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "tsc -p tsconfig.test.json"
   },
   "dependencies": {
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "conditional-type-checks": "^1.0.4",
     "typescript": "^3.7.2"
   },
   "types": "lib/index.d.ts"
