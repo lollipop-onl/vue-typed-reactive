@@ -12,13 +12,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn install
+      - run: npm install
       - name: Run test
-        run: yarn test
+        run: npm run test
       - name: Build lib files
-        run: yarn build
+        run: npm run build
       - name: Release package
-        run: yarn publish --access public
+        run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
         if: contains(github.ref, 'tags/v')
