@@ -86,12 +86,12 @@ export const mutations = {
 
 # Features
 
-## `typeSet(target, propertyName/index, value)`
+**`typeSet(target, propertyName/index, value)`**
 
 * `propertyName` can set only writable properties
 * `value` can set only assignable type
 
-## `typedDelete(target, propertyName/index)`
+**`typedDelete(target, propertyName/index)`**
 
 * `propertyName` can set only optional properties
 
