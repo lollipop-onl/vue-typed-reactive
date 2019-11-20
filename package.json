@@ -23,8 +23,5 @@
     "conditional-type-checks": "^1.0.4",
     "typescript": "^3.7.2"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "types": "lib/index.d.ts"
 }
