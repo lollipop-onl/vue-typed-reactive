@@ -17,8 +17,11 @@ jobs:
         run: npm run test
       - name: Build lib files
         run: npm run build
-      - name: Release package
-        run: npm publish --access public
+      - name: Setup release
+        if: contains(github.ref, 'tags/v')
+        run: echo //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN} > .npmrc
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+      - name: Release package
         if: contains(github.ref, 'tags/v')
+        run: npm publish --access public
