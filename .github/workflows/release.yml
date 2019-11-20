@@ -20,7 +20,7 @@ jobs:
       - name: Build lib files
         run: yarn build
       - name: Release package
-        run: yarn publish --access publish
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         if: contains(github.ref, 'tags/v')
