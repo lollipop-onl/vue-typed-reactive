@@ -2,10 +2,16 @@
   "name": "@lollipop-onl/vue-typed-reactive",
   "version": "0.0.0",
   "description": "Provide type-safed Vue.set/delete mehtods",
-  "main": "lib/index.js",
-  "author": "lollipop.onl",
+  "keywords": [
+    "typescript",
+    "vue"
+  ],
   "license": "MIT",
-  "private": false,
+  "author": "lollipop.onl",
+  "files": [
+    "lib/*"
+  ],
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc"
   },
@@ -14,5 +20,6 @@
   },
   "devDependencies": {
     "typescript": "^3.7.2"
-  }
+  },
+  "types": "lib/index.d.ts"
 }
