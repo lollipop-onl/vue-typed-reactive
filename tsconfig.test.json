@@ -1,14 +1,6 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "lib": ["dom", "esnext"],
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "strict": true,
-    "noImplicitAny": true,
     "noEmit": true
   },
   "files": ["tests/index.ts"]
