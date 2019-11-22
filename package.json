@@ -14,16 +14,13 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "build": "concurrently \"yarn:build:*\"",
-    "build:main": "tsc -p tsconfig.json",
-    "build:nuxt": "tsc -p tsconfig.nuxt.json",
+    "build": "tsc",
     "test": "tsc -p tsconfig.test.json"
   },
   "dependencies": {
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "concurrently": "^5.0.0",
     "conditional-type-checks": "^1.0.4",
     "typescript": "^3.7.2"
   },

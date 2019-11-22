@@ -14,8 +14,6 @@ $ npm install -S @lollipop-onl/vue-typed-reactive
 
 ### Step 1. Register to Vue app
 
-With Vue.js:
-
 ```ts
 import TypedReactive from '@lollipop-onl/vue-typed-reactive';
 
@@ -25,11 +23,24 @@ Vue.use(TypedReactive);
 With Nuxt.js:
 
 ```ts
+// @/plugins/libs/vue-typed-reactive.ts
+import { Plugin } from '@nuxt/types';
+import Vue from 'vue';
+import TypedReactive from '@lollipop-onl/vue-typed-reactive';
+
+const plugin: Plugin = () => {
+  Vue.use(TypedReactive);
+};
+
+export default plugin;
+```
+
+```ts
 // nuxt.config.ts
 const config: Configuration = {
   ...
-  modules: [
-    '@lollipop-onl/vue-typed-reactive/nuxt',
+  plugins: [
+    '@/plugins/libs/vue-typed-reactive',
   ],
   ...
 };
