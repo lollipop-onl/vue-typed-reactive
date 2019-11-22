@@ -1,6 +1,6 @@
 {
   "name": "@lollipop-onl/vue-typed-reactive",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Provide type-safed Vue.set/delete mehtods",
   "keywords": [
     "typescript",
