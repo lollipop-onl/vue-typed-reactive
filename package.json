@@ -1,25 +1,24 @@
 {
   "name": "@lollipop-onl/vue-typed-reactive",
   "version": "1.0.5",
-  "description": "Provide type-safed Vue.set/delete mehtods",
+  "description": "Provide type-safe Vue.set/Vue.delete mehtods",
   "keywords": [
     "typescript",
     "vue"
   ],
-  "homepage": "https://gitlab.com/lollipop.onl/vue-typed-reactive",
+  "homepage": "https://github.com/lollipop-onl/vue-typed-reactive",
   "bugs": {
-    "url": "https://gitlab.com/lollipop.onl/vue-typed-reactive/issues"
+    "url": "https://github.com/lollipop-onl/vue-typed-reactive/issues"
   },
   "license": "MIT",
   "author": "lollipop.onl",
   "files": [
-    "lib/*",
-    "nuxt.js"
+    "lib/*"
   ],
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/lollipop.onl/vue-typed-reactive.git"
+    "url": "git+ssh://git@github.com/lollipop-onl/vue-typed-reactive.git"
   },
   "scripts": {
     "build": "tsc",
