@@ -1,5 +1,7 @@
 # vue-typed-reactive
 
+![vtyped](https://raw.githubusercontent.com/lollipop-onl/vue-typed-reactive/master/vtyped.png)
+
 This plugin is provide type-safe version of Vue reactivity methods.
 
 ## Installation
