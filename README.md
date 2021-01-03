@@ -25,24 +25,11 @@ Vue.use(TypedReactive);
 With Nuxt.js:
 
 ```ts
-// @/plugins/libs/vue-typed-reactive.ts
-import { Plugin } from '@nuxt/types';
-import Vue from 'vue';
-import TypedReactive from '@lollipop-onl/vue-typed-reactive';
-
-const plugin: Plugin = () => {
-  Vue.use(TypedReactive);
-};
-
-export default plugin;
-```
-
-```ts
 // nuxt.config.ts
 const config: Configuration = {
   ...
-  plugins: [
-    '@/plugins/libs/vue-typed-reactive',
+  modules: [
+    '@/plugins/libs/vue-typed-reactive/nuxt',
   ],
   ...
 };
@@ -62,6 +49,28 @@ const config: Configuration = {
 ```
 
 Setup completed!
+
+### Step X. Set a weak types in tsconfig.json
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "types": [
+      "@lollipop-onl/vue-typed-reactive/weak"
+    ]
+  }
+}
+```
+
+when, next code is allowed:
+
+```ts
+const foo: { a: number } = { a: 0 };
+
+// `foo.a` is a NOT optional property. but allowed on weak type mode.
+Vue.typedDelete(foo, 'a');
+```
 
 ## Usage
 

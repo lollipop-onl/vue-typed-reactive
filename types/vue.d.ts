@@ -1,4 +1,3 @@
-import Vue, { PluginObject } from 'vue';
 import { WritableKeys, OptionalKeys } from './utils';
 
 declare module 'vue/types/vue' {
@@ -8,7 +7,7 @@ declare module 'vue/types/vue' {
     /** Type-safe version of Vue.delete */
     $typedDelete<T extends Object, K extends OptionalKeys<T>>(object: T, key: K): void;
   }
-  
+
   interface VueConstructor {
     /** Type-safe version of vm.$set */
     typedSet<T extends Object, K extends WritableKeys<T>>(object: T, key: K, value: T[K]): T[K];
@@ -16,17 +15,3 @@ declare module 'vue/types/vue' {
     typedDelete<T extends Object, K extends OptionalKeys<T>>(object: T, key: K): void;
   }
 }
-
-const TypedReactive: PluginObject<never> = {
-  install: (Vue) => {
-    // setup of typedSet method
-    Vue.typedSet = Vue.set;
-    Vue.prototype.$typedSet = Vue.set;
-
-    // setup of typedDelete method
-    Vue.typedDelete = Vue.delete;
-    Vue.prototype.$typedDelete = Vue.delete;
-  },
-};
-
-export default TypedReactive;

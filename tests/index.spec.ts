@@ -1,5 +1,5 @@
 import { assert, IsExact, Has, NotHas } from 'conditional-type-checks';
-import { WritableKeys, OptionalKeys } from '../src/utils';
+import { WritableKeys, OptionalKeys } from '../types/utils';
 
 type TypedSet<T extends Object, K extends WritableKeys<T> = WritableKeys<T>> = (object: T, key: K, value: NonNullable<T[K]>) => T[K];
 type TypedDelete<T extends Object, K extends OptionalKeys<T> = OptionalKeys<T>> = (object: T, key: K) => void;
