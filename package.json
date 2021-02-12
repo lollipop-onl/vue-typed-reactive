@@ -33,5 +33,5 @@
     "conditional-type-checks": "^1.0.5",
     "typescript": "^4.1.3"
   },
-  "types": "lib/type.d.ts"
+  "types": "types/vue.d.ts"
 }
