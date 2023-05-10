@@ -1,4 +1,4 @@
 import Vue from 'vue';
-import VueTypedReactive from '@lollipop-onl/vue-typed-reactive';
+import VueTypedReactive from '../lib/TypedReactive';
 
 Vue.use(VueTypedReactive);
